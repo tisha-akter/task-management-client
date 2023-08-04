@@ -19,7 +19,7 @@ const CreateTask = () => {
         console.log(newTask);
 
         // send data to the server 
-        fetch('http://localhost:5000/task', {
+        fetch('https://task-management-server-nine-khaki.vercel.app/task', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -5,7 +5,7 @@ function TaskList() {
 
     useEffect(() => {
         // Fetch tasks from the server
-        fetch('http://localhost:5000/task')
+        fetch('https://task-management-server-nine-khaki.vercel.app/task')
             .then((response) => response.json())
             .then((data) => setTasks(data))
             .catch((error) => {
@@ -16,7 +16,7 @@ function TaskList() {
     // eslint-disable-next-line no-unused-vars
     const handleUpdateStatus = (taskId, status) => {
         // Send a PUT request to update task status
-        fetch(`http://localhost:5000/task/${taskId}`, {
+        fetch(`https://task-management-server-nine-khaki.vercel.app/task/${taskId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ function TaskList() {
 
     const handleDeleteTask = (taskId) => {
         // Send a DELETE request to delete the task
-        fetch(`http://localhost:5000/task/${taskId}`, {
+        fetch(`https://task-management-server-nine-khaki.vercel.app/task/${taskId}`, {
             method: 'DELETE',
         })
             .then((response) => response.json())
